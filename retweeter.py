@@ -29,11 +29,11 @@ class Parser:
                 retweets = len(self.api.retweets(ID))
                 print retweets
 
-                if retweets >= RETWEET_POPULARITY:
-                    self.tweets.append(ID)
+                if retweets >= RETWEET_POPULARITY:  # if a tweet has a certain number of retweets then add it to the list to be
+                    self.tweets.append(ID)          # retweeted.
                     print 'Retweet made.'
 
-            if len(self.tweets) > THRESHOLD:
+            if len(self.tweets) > THRESHOLD:    #limits the amount of tweets you retweet, so as to not annoy your followers
                     break
 
 
